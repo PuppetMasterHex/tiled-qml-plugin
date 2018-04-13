@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/DragArea.qml</file>
+        <file>qml/StaticWall.qml</file>
+        <file>qml/PlayerActor.qml</file>
+        <file>qml/PhysicsItem.qml</file>
+        <file>qml/Teleport.qml</file>
+        <file>qml/MapEvent.qml</file>
+    </qresource>
+</RCC>

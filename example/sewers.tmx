@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="70" height="70" tilewidth="24" tileheight="24" infinite="0" nextobjectid="45">
+ <properties>
+  <property name="music" value="none"/>
+ </properties>
+ <tileset firstgid="1" source="sewer_tileset.tsx"/>
+ <layer name="Bottom" width="70" height="70">
+  <data encoding="base64" compression="zlib">
+   eJztmN1qwzAMRsPu1maFrqOwrTdb97/32Ps/0hxWgRCyIy8kVuzv4tASg7FPLMnRqeu60wroAzf/YBd4Zpwd7AVe4AVefAEv8AIv8AIv8OIBeIEXeIEXeKnDy33gQaH0fkt7eRLjROn9evAi59452K8HL3eBK8bRwX49eLkObBhb45piuemxEi/7wE/g9vJ7MK4plpuWrHlzefkMfClYvWi5KeZF5q5eeabtOZXvPN5fYrlpzAutpRfPzmJuOS7jlc/hzYuWm+bw8tL9nePXC8P/N8detNxk9UJn7Wjwos2pxbEHL7Hc9G30QmdtO8GLjGMr9C48fB9JL8NZG87ZIeJlbN1aHHPeE2P0Lig+Y++yhJdUfbd6IbecD+WZRHsXa/FiiaPYXFY8esmpR2NetDxnoWT8LOGl9N7m9MLvbnI85cVDLExB1kd5fxlqA93b+J0t5oXuCR5iYQq8PlruL9zb2s9ECl4fLfcX7k3zQn2OJfsac2Kt0/SNEfu2qCW/EJaaKb8xtBxSS34BANSBh169Rzz06j2S26tvhdxefSvk9upbIbdX3wq5vXoAAAAAAAAAAAAAAAAAALTHL/emAEw=
+  </data>
+ </layer>
+ <layer name="Top" width="70" height="70">
+  <data encoding="base64" compression="zlib">
+   eJzt2L0KwjAYhtEO6qTeioN/g7h5/9dkhhY6vNIl0UbOgY9uIX0goXQY/t/t1xtYKV0yXTJdMl0yXTJdMl0yXTJdMl0yXTJdMl0yXbKlLpsy29nsmu9oHZa67MscZnNsvqN1cI4yXbKWXXq+m1p26fluco4yXTJdMl2yXrtMd3qtu/xU5jzOpcy10rrfVrvLvcyjzGt8PiutW9v07fPpm6d2l14svbcuAAAAbfX8r76lnv/VAwAAAAAAAPybN82FCbA=
+  </data>
+ </layer>
+ <objectgroup color="#ff0000" name="Collision">
+  <object id="15" type="StaticCollision" x="600" y="720" width="72" height="144"/>
+  <object id="16" type="StaticCollision" x="504" y="528" width="48" height="384"/>
+  <object id="18" type="StaticCollision" x="600" y="552" width="72" height="120"/>
+  <object id="21" type="StaticCollision" x="792" y="552" width="72" height="96"/>
+  <object id="23" type="StaticCollision" x="792" y="696" width="72" height="192"/>
+  <object id="25" type="StaticCollision" x="720" y="552" width="48" height="216"/>
+  <object id="27" type="StaticCollision" x="720" y="816" width="48" height="96"/>
+  <object id="28" type="StaticCollision" x="504" y="912" width="384" height="24"/>
+  <object id="30" type="StaticCollision" x="888" y="600" width="96" height="336"/>
+  <object id="31" type="StaticCollision" x="552" y="528" width="456" height="24"/>
+  <object id="36" type="StaticCollision" x="1416" y="672" width="48" height="96"/>
+  <object id="38" type="StaticCollision" x="1464" y="0" width="24" height="696"/>
+  <object id="41" type="StaticCollision" x="1008" y="0" width="360" height="696"/>
+  <object id="42" type="StaticCollision" x="984" y="816" width="72" height="24"/>
+  <object id="43" type="StaticCollision" x="1056" y="744" width="360" height="96"/>
+ </objectgroup>
+ <objectgroup name="Teleports">
+  <object id="13" name="sewers2" type="Teleport" x="1368" y="0" width="96" height="24">
+   <properties>
+    <property name="NextRoomId" type="int" value="32"/>
+    <property name="roomFileName" value="sewers2.tmx"/>
+    <property name="xTile" type="int" value="24"/>
+    <property name="yTile" type="int" value="47"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="Event" color="#ff00ff">
+  <property name="active" type="bool" default="false"/>
+  <property name="eventName" type="string"/>
+  <property name="qmlType" type="string" default="MapEvent.qml"/>
+ </objecttype>
+ <objecttype name="Hazard" color="#aa0000">
+  <property name="Damage" type="int" default="50"/>
+  <property name="InstaDead" type="bool" default="false"/>
+ </objecttype>
+ <objecttype name="NewChallenger" color="#55ffff"/>
+ <objecttype name="Sign" color="#55aa7f">
+  <property name="text" type="file" default=""/>
+ </objecttype>
+ <objecttype name="StaticCollision" color="#ff0000">
+  <property name="persistent" type="bool" default="false"/>
+  <property name="qmlType" type="string" default="StaticWall.qml"/>
+ </objecttype>
+ <objecttype name="Teleport" color="#ffff00">
+  <property name="active" type="bool" default="true"/>
+  <property name="persistent" type="bool" default="false"/>
+  <property name="qmlType" type="string" default="Teleport.qml"/>
+  <property name="roomFileName" type="string"/>
+  <property name="xTile" type="int" default="0"/>
+  <property name="yTile" type="int" default="0"/>
+ </objecttype>
+</objecttypes>

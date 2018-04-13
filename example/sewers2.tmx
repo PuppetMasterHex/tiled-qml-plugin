@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="24" tileheight="24" infinite="0" nextobjectid="9">
+ <tileset firstgid="1" source="sewer_tileset.tsx"/>
+ <layer name="Bottom" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt1zEOgkAURdHZAPQojWBIlP3vjymIFQ1R8GlOcYrp3s2vpi+l9AAAAMBLV102XAO27XGrhg1jwDYdOr7tUT2rad1/X99zwLZ37vJrd9CRTUcWHVl0ZNGRRUcWHVl0ZPmXjjP/5c1BWh06dOj4sAX71Qwj
+  </data>
+ </layer>
+ <layer name="Top" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztz8EJAAAIxDA/uv/ITnGCkEAHaBUAAAAAAAAAAAkdai4nAB5ZjXIAdQ==
+  </data>
+ </layer>
+ <objectgroup name="Teleports">
+  <object id="8" name="sewers1" type="Teleport" x="552" y="1176" width="72" height="24">
+   <properties>
+    <property name="NextRoomId" type="int" value="32"/>
+    <property name="roomFileName" value="sewers.tmx"/>
+    <property name="xTile" type="int" value="59"/>
+    <property name="yTile" type="int" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Collision">
+  <object id="3" type="StaticCollision" x="504" y="600" width="48" height="600"/>
+  <object id="4" type="StaticCollision" x="624" y="600" width="48" height="600"/>
+  <object id="5" type="StaticCollision" x="672" y="456" width="24" height="168"/>
+  <object id="6" type="StaticCollision" x="480" y="456" width="24" height="168"/>
+  <object id="7" type="StaticCollision" x="480" y="432" width="216" height="24"/>
+ </objectgroup>
+</map>
