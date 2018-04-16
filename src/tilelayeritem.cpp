@@ -303,8 +303,7 @@ TileLayerItem::TileLayerItem(TileLayer *layer, MapRenderer *renderer,
 
 void TileLayerItem::syncWithTileLayer()
 {
-  qDebug() << "TestX1" << mRenderer->boundingRect(mLayer->bounds()) << mLayer->bounds() << mLayer->x() << mLayer->y();
-    const QRectF boundingRect = mRenderer->boundingRect(mLayer->bounds());
+    const QRectF boundingRect = mRenderer->boundingRect(mLayer->rect());
     setPosition(boundingRect.topLeft());
     setSize(boundingRect.size());
 }
