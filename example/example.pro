@@ -2,16 +2,15 @@
 isEmpty(LIBTILED_LIBDIR) {
   error(Set LIBTILED_LIBDIR to the directory containing the libtiled.so.x.y.z)
 }
+LIBS += -L$${LIBTILED_LIBDIR}
 
 DEFINES += TILED_QUICK_PLUGIN_DIR=\\\"$$PWD/../qml\\\"
 
-#todo remove local stuff
-DEFINES += BOX2D_QUICK_PLUGIN_DIR=\\\"$$clean_path($$OUT_PWD/../3rdparty/qml-box2d)\\\"
 isEmpty(BOX2D_QUICK_PLUGIN_DIR) {
-  #if qml-box2d is installed alongside your qt version you can ignore this warning
+  #if qml-box2d is installed in your standard qt qml plugin location you can ignore this warning
   warning(Set BOX2D_QUICK_PLUGIN_DIR to the directory containing the libBox2D.so qml plugin)
 }
-LIBS += -L$${LIBTILED_LIBDIR}
+DEFINES += BOX2D_QUICK_PLUGIN_DIR=\\\"$${BOX2D_QUICK_PLUGIN_DIR}\\\"
 
 TEMPLATE = app
 
