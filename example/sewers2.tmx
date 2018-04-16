@@ -8,7 +8,7 @@
  </tileset>
  <layer name="Bottom" width="70" height="70">
   <data encoding="base64" compression="zlib">
-   eJzt2V0LgjAUgOFRV31CJYLlTR8E1v/o//+kzsDBoWaWC5vrvXgIxAbnRWS10hhTAgAAAAAAAAAAAAAAAAB6VYitx67nNWKzFwePY89rxMbONBcLZdmhS+gasbEzZWKk5B26hK4RGzvTREyVWYcuoWvExs60Ejexrj83HbqErhGbSlw8rj2vAaTOt28b8p7tW3z7tiG/U+lCF7rEw+1PzuJk2Js8ss8Nzwld6EIXutDl1+hCF7q81nQGpLnfAG33pfRfRGH8Z0AhUni2ms7G6PJ8NvZ4Tubmffe+lLuMa7maN1PXU+9SebrYGWeKm1df830npS5lw4wbxc2rr/1rl7Z3K13oorV1Sf29S5fPunwqpMsd2rYUfw==
+   eJzt2d8KgjAUgHGpq7KCUoTKm/4QWO/R+z9SZ+DgIDPThc31XfwIxAbnQ2S1MkmSEgAAAAAAAAAAAAAAAAAwqr04OBxHXiM0J3F2uIy8RmjMTCuxVjYDuviuERozUy5mSjGgi+8aoTEzLcRSSQd08V0jNGamrXiKXf2ZDejiu0ZoKnF3eIy8BhA7175tynu2b3Ht26b8TqULXegSDrs/uYlrwt6kyTw3PCd0oQtd6EKXX6MLXejyXtsZkGZ/A3TdF9N/EW1nQD5ieLbo0t6leTbWPCez8356X8xd5rVCzZur67F3qRxdzIypYufV11zfialL2TJjpth59bV/7dL1bqULXbSuLrG/d+nSr0tfPl1eNmUUhw==
   </data>
  </layer>
  <layer name="Top" width="70" height="70">
@@ -21,7 +21,7 @@
    eJzt0LEJACAMAME0lu6/rkUKIcRe8Q5+gY8AAAAAAAAAAAAAAAAAAAAAeNcokWaJ5MtWX5z6jS89X3q+9Hzp+cLNFjprA4k=
   </data>
  </layer>
- <objectgroup name="Secrets" opacity="0.38">
+ <objectgroup name="Secrets">
   <object id="58" name="SecretArea1" type="Event" x="1032" y="1476" width="192" height="180">
    <properties>
     <property name="active" type="bool" value="true"/>
@@ -29,7 +29,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup color="#ff0000" name="Collision" opacity="0.41">
+ <objectgroup color="#ff0000" name="Collision">
   <object id="37" type="StaticCollision" x="1032" y="1008" width="192" height="24"/>
   <object id="45" type="StaticCollision" x="1152" y="1176" width="264" height="216"/>
   <object id="46" type="StaticCollision" x="888" y="1176" width="216" height="216"/>
@@ -44,7 +44,7 @@
   <object id="64" type="StaticCollision" x="1008" y="1560" width="24" height="120"/>
   <object id="65" type="StaticCollision" x="1032" y="1656" width="192" height="24"/>
  </objectgroup>
- <objectgroup name="Teleports" opacity="0.39">
+ <objectgroup name="Teleports">
   <object id="54" name="sewers1" type="Teleport" x="1344" y="1656" width="72" height="24">
    <properties>
     <property name="NextRoomId" type="int" value="32"/>

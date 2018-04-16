@@ -42,15 +42,15 @@ MapItem::MapItem(QQuickItem *parent)
 {
 }
 
-void MapItem::setModel(MapLoader *t_model)
+void MapItem::setModel(MapLoader *mapModel)
 {
-  Q_ASSERT(t_model != nullptr);
-  if(mModel == t_model)
+  Q_ASSERT(mapModel != nullptr);
+  if(mModel == mapModel)
     return;
 
   if(mModel)
     disconnect(mModel, &MapLoader::mapChanged, this, &MapItem::setMap); //why would someone change the MapLoader?? investigate if we have to disconnect here
-  mModel = t_model;
+  mModel = mapModel;
   connect(mModel, &MapLoader::mapChanged, this, &MapItem::setMap);
   setMap(mModel->map());
 }
@@ -249,12 +249,12 @@ TileLayerItem *MapItem::getTileLayerItemAt(int index) const
   return retVal;
 }
 
-TileLayerItem *MapItem::getTileLayerItemByName(const QString t_name) const
+TileLayerItem *MapItem::getTileLayerItemByName(const QString tileLayerName) const
 {
   TileLayerItem *retVal = nullptr;
   for(TileLayerItem *tmpLayerItem : qAsConst(mTileLayerItems))
   {
-    if(tmpLayerItem->name() == t_name)
+    if(tmpLayerItem->name() == tileLayerName)
     {
       retVal = tmpLayerItem;
       QQmlEngine::setObjectOwnership(retVal, QQmlEngine::CppOwnership); //otherwise QML would take ownership and delete the object
@@ -300,7 +300,6 @@ void MapItem::refresh()
       TileLayerItem *layerItem = new TileLayerItem(tl, mRenderer, this);
       layerItem->setZ(tl->siblingIndex());
       mTileLayerItems.append(layerItem);
-      qDebug() << "Added layer" << tl->name() << "z:" << tl->siblingIndex() << "bounds:" << tl->bounds();
     }
   }
   emit tileLayerItemCountChanged(mTileLayerItems.count());
@@ -309,7 +308,6 @@ void MapItem::refresh()
   const auto objGroups = mMap->objectGroups();
   for(Tiled::ObjectGroup *tmpGroup : objGroups)
   {
-    qDebug() << "Added object group:" << tmpGroup->name();
     mObjectGroupTable.insert(tmpGroup->name(), tmpGroup);
   }
 

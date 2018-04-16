@@ -23,7 +23,7 @@ namespace TiledQuick
     Q_PROPERTY(QVariantList mapObjects READ mapObjects NOTIFY mapObjectsChanged)
 
   public:
-    ObjectGroupItem(QQuickItem *t_parent=nullptr);
+    ObjectGroupItem(QQuickItem *parentItem=nullptr);
 
     MapItem *mapItem() const { return m_map; }
     int globalIndex() const;
@@ -32,8 +32,8 @@ namespace TiledQuick
     QVariantList mapObjects() const { return m_objectList; }
 
   public slots:
-    void setMapItem(MapItem *t_map);
-    void setname(QString t_name);
+    void setMapItem(MapItem *mapItem);
+    void setname(QString groupName);
 
   signals:
     void nameChanged(QString name);

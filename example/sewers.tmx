@@ -6,30 +6,30 @@
  <tileset firstgid="1" source="sewer_tileset.tsx"/>
  <layer name="Bottom" width="70" height="70">
   <data encoding="base64" compression="zlib">
-   eJztmN1qwzAMRsPu1maFrqOwrTdb97/32Ps/0hxWgRCyIy8kVuzv4tASg7FPLMnRqeu60wroAzf/YBd4Zpwd7AVe4AVefAEv8AIv8AIv8OIBeIEXeIEXeKnDy33gQaH0fkt7eRLjROn9evAi59452K8HL3eBK8bRwX49eLkObBhb45piuemxEi/7wE/g9vJ7MK4plpuWrHlzefkMfClYvWi5KeZF5q5eeabtOZXvPN5fYrlpzAutpRfPzmJuOS7jlc/hzYuWm+bw8tL9nePXC8P/N8detNxk9UJn7Wjwos2pxbEHL7Hc9G30QmdtO8GLjGMr9C48fB9JL8NZG87ZIeJlbN1aHHPeE2P0Lig+Y++yhJdUfbd6IbecD+WZRHsXa/FiiaPYXFY8esmpR2NetDxnoWT8LOGl9N7m9MLvbnI85cVDLExB1kd5fxlqA93b+J0t5oXuCR5iYQq8PlruL9zb2s9ECl4fLfcX7k3zQn2OJfsac2Kt0/SNEfu2qCW/EJaaKb8xtBxSS34BANSBh169Rzz06j2S26tvhdxefSvk9upbIbdX3wq5vXoAAAAAAAAAAAAAAAAAALTHL/emAEw=
+   eJztmNFOwzAMRSveYGMSG5oE7AU22ID/4P8/iVTMkmU5qUPVxk3uw9FQI6LkNHZcH7quOyyAdeD+H2wCb4yjg73AC7zAiy/gBV7gBV7gBV48AC/wAi/wAi91eHkKPCuU3m9pL69inCi9Xw9e5NwbB/v14OUxcMPYO9ivBy+3gTvGyrimWG56qcTLQ+AnsL3+7oxriuWmOe+8qbx8Br4UrF603KR5WbPx1LOh/5nLyxhiuWnIC61FPjuKueW4jFc+hzcvWm6awsup+zvH71f6vz8ce9Fyk9ULnbW9wYs2pxbHHrzEctO30QudtdUILzKOrdC7KP19pHnpz1p/znYRL0Pr1uKYc06M0bug+NTeZSkvqfvd6oXcci7KM4n2LpbixRJHsbmsePSScx8NedHynIVS8TOXl5J7m9oLr93keMpL6VgYg6xVtPqlvxuobuM1W8wL1QmlY2EMslax1C/c25LPRApZq1jqF+5N80J9jjn7GlNivafpGyP2bVFDfuFY7kz5jaHlkBryCwCgHjz06j3ioVfvkZxefUvk9OpbIqdX3xI5vfqWyOnVAwAAAAAAAAAAAAAAAACgTX4BDeP/Zw==
   </data>
  </layer>
  <layer name="Top" width="70" height="70">
   <data encoding="base64" compression="zlib">
-   eJzt2L0KwjAYhtEO6qTeioN/g7h5/9dkhhY6vNIl0UbOgY9uIX0goXQY/t/t1xtYKV0yXTJdMl0yXTJdMl0yXTJdMl0yXTJdMl0yXbKlLpsy29nsmu9oHZa67MscZnNsvqN1cI4yXbKWXXq+m1p26fluco4yXTJdMl2yXrtMd3qtu/xU5jzOpcy10rrfVrvLvcyjzGt8PiutW9v07fPpm6d2l14svbcuAAAAbfX8r76lnv/VAwAAAAAAAPybN82FCbA=
+   eJzt2b0KwjAYhtEO6qTeioN/g7h5/9dkhgodXohDoq2eAx9CwZI+0FjqMPy+y7cXMFO6ZLpkumS6ZLpkumS6ZLpkumS6ZLpkumS6ZLpktS6rMuvJbLqvaB5qXbZldpPZd1/RPLiPMl2ynl2WvDf17PLu3vTqt6kcq32nJfdRpkumS6ZLttQurz291XPmocxxnFOZc6PzflrrLtcytzKP8fPe6Lyt1X6HW3dZitp16wIAANDXkt/V9/Sv/yMCAAAAAAAAzNETJr8J3Q==
   </data>
  </layer>
  <objectgroup color="#ff0000" name="Collision">
   <object id="15" type="StaticCollision" x="600" y="720" width="72" height="144"/>
-  <object id="16" type="StaticCollision" x="504" y="528" width="48" height="384"/>
+  <object id="16" type="StaticCollision" x="528" y="528" width="24" height="384"/>
   <object id="18" type="StaticCollision" x="600" y="552" width="72" height="120"/>
   <object id="21" type="StaticCollision" x="792" y="552" width="72" height="96"/>
   <object id="23" type="StaticCollision" x="792" y="696" width="72" height="192"/>
   <object id="25" type="StaticCollision" x="720" y="552" width="48" height="216"/>
   <object id="27" type="StaticCollision" x="720" y="816" width="48" height="96"/>
-  <object id="28" type="StaticCollision" x="504" y="912" width="384" height="24"/>
-  <object id="30" type="StaticCollision" x="888" y="600" width="96" height="336"/>
+  <object id="28" type="StaticCollision" x="528" y="912" width="384" height="24"/>
+  <object id="30" type="StaticCollision" x="888" y="600" width="96" height="312"/>
   <object id="31" type="StaticCollision" x="552" y="528" width="456" height="24"/>
   <object id="36" type="StaticCollision" x="1416" y="672" width="48" height="96"/>
   <object id="38" type="StaticCollision" x="1464" y="0" width="24" height="696"/>
   <object id="41" type="StaticCollision" x="1008" y="0" width="360" height="696"/>
-  <object id="42" type="StaticCollision" x="984" y="816" width="72" height="24"/>
-  <object id="43" type="StaticCollision" x="1056" y="744" width="360" height="96"/>
+  <object id="42" type="StaticCollision" x="984" y="816" width="96" height="24"/>
+  <object id="43" type="StaticCollision" x="1056" y="744" width="360" height="72"/>
  </objectgroup>
  <objectgroup name="Teleports">
   <object id="13" name="sewers2" type="Teleport" x="1368" y="0" width="96" height="24">

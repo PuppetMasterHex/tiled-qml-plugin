@@ -67,7 +67,7 @@ namespace TiledQuick {
     Q_ENUM(LayerTypeFlag)
 
     MapLoader *model() const { return mModel; }
-    void setModel(MapLoader *t_model);
+    void setModel(MapLoader *mapModel);
     Tiled::Map *map() const;
     QUrl objectTypesSource() const { return mObjectTypesSource; }
     void setObjectTypesSource(QUrl objectTypesSource);
@@ -94,7 +94,7 @@ namespace TiledQuick {
     Q_INVOKABLE QPointF pixelToTileCoords(const QPointF &position) const;
 
     Q_INVOKABLE TileLayerItem *getTileLayerItemAt(int index) const;
-    Q_INVOKABLE TileLayerItem *getTileLayerItemByName(const QString t_name) const;
+    Q_INVOKABLE TileLayerItem *getTileLayerItemByName(const QString tileLayerName) const;
     void componentComplete();
 
   signals:

@@ -9,7 +9,7 @@
 
 namespace TiledQuick
 {
-  ObjectGroupItem::ObjectGroupItem(QQuickItem *t_parent) : QQuickItem(t_parent)
+  ObjectGroupItem::ObjectGroupItem(QQuickItem *parentItem) : QQuickItem(parentItem)
   {
 
   }
@@ -27,9 +27,9 @@ namespace TiledQuick
       return m_objectGroup->properties();
   }
 
-  void ObjectGroupItem::setMapItem(MapItem *t_map)
+  void ObjectGroupItem::setMapItem(MapItem *mapItem)
   {
-    if(!t_map || m_map == t_map)
+    if(!mapItem || m_map == mapItem)
       return;
 
     if(m_map)
@@ -38,21 +38,18 @@ namespace TiledQuick
       disconnect(m_map, &MapItem::objectTypesSourceChanged, this ,&ObjectGroupItem::initObjectGroup);
     }
 
-    m_map = t_map;
+    m_map = mapItem;
     connect(m_map, &MapItem::mapChanged, this, &ObjectGroupItem::initObjectGroup);
     connect(m_map, &MapItem::objectTypesSourceChanged, this ,&ObjectGroupItem::initObjectGroup);
-
-//    if(m_map->map())
-//      initObjectGroup();
   }
 
-  void ObjectGroupItem::setname(QString t_name)
+  void ObjectGroupItem::setname(QString groupName)
   {
-    Q_ASSERT(t_name.isEmpty() == false);
-    if (m_name == t_name)
+    Q_ASSERT(groupName.isEmpty() == false);
+    if (m_name == groupName)
       return;
 
-    m_name = t_name;
+    m_name = groupName;
     emit nameChanged(m_name);
   }
 

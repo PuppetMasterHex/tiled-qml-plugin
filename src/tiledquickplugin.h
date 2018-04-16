@@ -39,7 +39,6 @@ class TiledQuickPlugin : public QQmlExtensionPlugin
 
 public:
   void registerTypes(const char *uri);
-  static QObject *utilsSingletonFactory(QQmlEngine *t_engine, QJSEngine *t_scriptEngine);
 };
 
 } // namespace TiledQuick
