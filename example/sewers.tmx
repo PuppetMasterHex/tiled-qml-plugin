@@ -36,8 +36,8 @@
    <properties>
     <property name="NextRoomId" type="int" value="32"/>
     <property name="roomFileName" value="sewers2.tmx"/>
-    <property name="xTile" type="int" value="24"/>
-    <property name="yTile" type="int" value="47"/>
+    <property name="xTile" type="int" value="57"/>
+    <property name="yTile" type="int" value="67"/>
    </properties>
   </object>
  </objectgroup>

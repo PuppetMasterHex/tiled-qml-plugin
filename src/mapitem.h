@@ -93,8 +93,8 @@ namespace TiledQuick {
     Q_INVOKABLE QPointF pixelToTileCoords(qreal x, qreal y) const;
     Q_INVOKABLE QPointF pixelToTileCoords(const QPointF &position) const;
 
-    Q_INVOKABLE Tiled::TileLayer *getTileLayerAt(int index) const;
     Q_INVOKABLE TileLayerItem *getTileLayerItemAt(int index) const;
+    Q_INVOKABLE TileLayerItem *getTileLayerItemByName(const QString t_name) const;
     void componentComplete();
 
   signals:

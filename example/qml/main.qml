@@ -223,46 +223,48 @@ Window {
         }
       }
 
-//      Tiled.ObjectGroup {
-//        id: eventObjects
-//        tileMapItem: mapItem
-//        name: "Secrets"
+      Tiled.ObjectGroup {
+        id: eventObjects
+        tileMapItem: mapItem
+        name: "Secrets"
 
-//        Shortcut {
-//          //enabled: BUILD_TYPE === "debug"
-//          sequence: "F5"
-//          autoRepeat: false
-//          onActivated: {
-//            eventObjects.visible = !eventObjects.visible
-//          }
-//        }
+        Shortcut {
+          //enabled: BUILD_TYPE === "debug"
+          sequence: "F5"
+          autoRepeat: false
+          onActivated: {
+            eventObjects.visible = !eventObjects.visible
+          }
+        }
 
-//        onObjectAdded: {
-//          console.log("Added teleport object:", mapObject.name, mapObject.roomFileName)
-//          var newObj = createMapObject(mapObject.qmlType, mapObject);
-//          if(newObj)
-//          {
-//            newObj.visible = Qt.binding(function(){ return eventObjects.visible; })
-//            newObj.opacity = 0.2
-//            if(newObj.persistent)
-//            {
-//              //console.log("Added persistent object:", newObj.name)
-//              mapItem.persistentObjectList.push(newObj);
-//            }
-//            else
-//            {
-//              //console.log("Added temp object:", newObj.name)
-//              mapItem.temporaryObjectList.push(newObj);
-//            }
-//          }
-//        }
-//      }
+        onObjectAdded: {
+          console.log("Added secret object:", mapObject.name, mapObject.roomFileName)
+          var newObj = createMapObject(mapObject.qmlType, mapObject);
+          if(newObj)
+          {
+            newObj.visible = Qt.binding(function(){ return eventObjects.visible; })
+            newObj.opacity = 0.2
+            if(newObj.persistent)
+            {
+              //console.log("Added persistent object:", newObj.name)
+              mapItem.persistentObjectList.push(newObj);
+            }
+            else
+            {
+              //console.log("Added temp object:", newObj.name)
+              mapItem.temporaryObjectList.push(newObj);
+            }
+          }
+        }
+      }
 
       Tiled.MapItem {
         id: mapItem
 
         property var temporaryObjectList: []
         property var persistentObjectList: []
+
+        property QtObject secretTileLayerItem;
 
         mapSource: Tiled.MapLoader {
           id: mapLoader
@@ -299,6 +301,8 @@ Window {
             x = newCoords.x
             y = newCoords.y
           }
+
+          onSecretAreasVisibleChanged: mapItem.secretTileLayerItem.visible=!secretAreasVisible
 
           property var playerStartPos;
         }
@@ -337,6 +341,8 @@ Window {
           player.x = player.playerStartPos.x
           player.y = player.playerStartPos.y
           player.z = mapItem.z+1
+
+          secretTileLayerItem = getTileLayerItemByName("SecretHidden");
         }
       }
     }

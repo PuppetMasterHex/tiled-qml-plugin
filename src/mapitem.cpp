@@ -249,6 +249,21 @@ TileLayerItem *MapItem::getTileLayerItemAt(int index) const
   return retVal;
 }
 
+TileLayerItem *MapItem::getTileLayerItemByName(const QString t_name) const
+{
+  TileLayerItem *retVal = nullptr;
+  for(TileLayerItem *tmpLayerItem : qAsConst(mTileLayerItems))
+  {
+    if(tmpLayerItem->name() == t_name)
+    {
+      retVal = tmpLayerItem;
+      QQmlEngine::setObjectOwnership(retVal, QQmlEngine::CppOwnership); //otherwise QML would take ownership and delete the object
+      break;
+    }
+  }
+  return retVal;
+}
+
 void MapItem::componentComplete()
 {
   QQuickItem::componentComplete();
