@@ -91,7 +91,7 @@ Window {
     font.pointSize: 14
     property int tileX: mapItem.screenToTileCoords(player.x+player.width/2, player.y+player.height/2).x
     property int tileY: mapItem.screenToTileCoords(player.x+player.width/2, player.y+player.height/2).y
-    text: String("x: %1 y: %2 \ntileX: %3 tileY: %4 \nzoom: %5%").arg(player.x).arg(player.y).arg(tileX).arg(tileY).arg(mapContainer.scale*100)
+    text: String("x: %1 y: %2 \ntileX: %3 tileY: %4").arg(player.x).arg(player.y).arg(tileX).arg(tileY)
   }
 
   Timer {

@@ -13,3 +13,10 @@ https://github.com/mitchcurtis/tiled/tree/58c7fa2c66d74fc63e7426ae0e439761480b8a
 
 And for the example code:
 https://github.com/mitchcurtis/quick-tmx-viewer
+
+
+## Example screenshots
+
+![screenshot of example project](screenshots/tiled-qml.png)
+![screenshot of example project](screenshots/tiled-qml1.png)
+![screenshot of example project](screenshots/tiled-qml2.png)
